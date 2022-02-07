@@ -1,12 +1,22 @@
 import { useLocation } from "react-router-dom";
+import { useState,useEffect } from "react";
 
+import { searchQuery } from "../services/endpoints";
 
 export default function SearchResults() {
-    const { search } = useLocation();
-    console.log(search)
-    return (
+    const { params } = useLocation();
+    const search = new URLSearchParams(params).getAll("search")[0];
+    const [results, setResults] = useState([]);
+    
+    async function getResults() {
+        setResults(await searchQuery(search))
+    };
+    
+    useEffect(() =>getResults(), []);
+    
+    return(
         <>
-            Estos son los resultados de busqueda
+            {results.author?results.author.name:<></>}
         </>
     )
 }
