@@ -3,7 +3,7 @@ import styled from "styled-components";
 import freeShip from "../assets/ic_shipping@2x.png.png.png";
 
 const ItemCard = styled.section`
-
+    background: red;
 `;
 const Title = styled.h4`
 
