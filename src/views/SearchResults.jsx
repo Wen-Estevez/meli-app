@@ -9,7 +9,9 @@ const Results = styled.article`
     background: #f0efef;
 `;
 const Categories = styled.span`
-
+    font-size: 10px;
+    margin: 1rem;
+    color: #a8a8a8;
 `;
 
 export default function SearchResults() {
