@@ -41,13 +41,13 @@ const SearchButton = styled.button`
 
 const LogoImage = styled.img`
     height: 30px;
-    margin-left: 12%;
+    margin-left: 15%;
     padding:0.8rem;
 `;
 
 const MenuL = styled(Link)`                           //Estilo link
     text-decoration:none;
-`
+`;
 
 export default function SearchBar() {
     const [input, setInput] = useState("");

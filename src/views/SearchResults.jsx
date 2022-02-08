@@ -6,7 +6,7 @@ import { searchQuery } from "../services/endpoints";
 import ResultItem from "./ResultItem";
 
 const Results = styled.article`
-
+    background: #f0efef;
 `;
 const Categories = styled.span`
 
