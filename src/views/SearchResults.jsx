@@ -10,7 +10,7 @@ const Results = styled.article`
 `;
 const Categories = styled.span`
     font-size: 10px;
-    margin: 1rem;
+    margin-left: 3rem;
     color: #a8a8a8;
 `;
 
