@@ -48,7 +48,8 @@ export default function ItemDetail() {
         setItem(await searchId(id));
     };
     
-    useEffect(() => getItem(), []);
+    useEffect(() => getItem(),// eslint-disable-next-line react-hooks/exhaustive-deps
+        []);
 
     return (
         <Container>
