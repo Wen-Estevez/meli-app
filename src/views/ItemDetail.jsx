@@ -5,11 +5,26 @@ import styled from "styled-components";
 import { searchId } from "../services/endpoints";
 
 const Container = styled.div`
+    background: #D5D5D3;
+    height:100%;
+    padding:2% 0;
+`;
+
+const Section = styled.section`
+    float:right;
+`;
+
+const Card = styled.div`
+    background: white;
+    margin: 0 auto;
+    width:80%;
+    padding:5%;
 
 `;
 
 const Image = styled.img`
-
+    height:25rem;
+    width:45rem;
 `;
 
 const Title = styled.h2`
@@ -17,7 +32,7 @@ const Title = styled.h2`
 `;
 
 const Price = styled.span`
-
+    font-size:2rem;
 `;
 
 const Decimals = styled.span`
@@ -29,11 +44,16 @@ const Info = styled.span`
 `;
 
 const BuyButton = styled.button`
-
+    display:block;
+    background:#3481fe;
+    border:none;
+    color:white;
+    padding:0.5rem 4rem;
+    margin:0 auto;
 `;
 
 const DescTitle = styled.h4`
-
+    font-size:2rem;
 `;
 
 const DescText = styled.span`
@@ -53,14 +73,18 @@ export default function ItemDetail() {
 
     return (
         <Container>
-            <Image src={item?.item.picture} />
-            <Title>{item?.item.title}</Title>
-            <Price>{item?.item.price.amount}</Price>
-            <Decimals>{item?.item.price.decimals}</Decimals>
-            <Info>{item?.item.condition}</Info>
-            <BuyButton>Comprar</BuyButton>
-            <DescTitle>Descripción del producto</DescTitle>
-            <DescText>{item?.item.description}</DescText>
+            <Card>
+                <Image src={item?.item.picture} />
+                <Section>
+                    <Info>{item?.item.condition}</Info>
+                    <Title>{item?.item.title}</Title>
+                    <Price>${item?.item.price.amount}</Price>
+                    <Decimals>{item?.item.price.decimals}</Decimals>
+                    <BuyButton>Comprar</BuyButton>
+                </Section>
+                <DescTitle>Descripción del producto</DescTitle>
+                <DescText>{item?.item.description}</DescText>
+            </Card>
         </Container>
     )
 }
