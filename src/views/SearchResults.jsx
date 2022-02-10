@@ -23,7 +23,8 @@ export default function SearchResults() {
         setResults(await searchQuery(search))
     };
     
-    useEffect(() =>getResults(),[params]);
+    useEffect(() => getResults(),// eslint-disable-next-line react-hooks/exhaustive-deps
+        [params]);
     
     return(
         <Results>
