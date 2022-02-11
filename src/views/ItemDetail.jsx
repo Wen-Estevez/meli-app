@@ -25,7 +25,8 @@ const Card = styled.div`
 
 const Image = styled.img`
     height:auto;
-    width:70%;
+    width:500px;
+    height: 500px;
 `;
 
 const Title = styled.h2`
@@ -60,6 +61,7 @@ const BuyButton = styled.button`
 const DescTitle = styled.h4`
     font-size: 25px;
     color: #555555;
+    margin-top: 5rem;
 `;
 
 const DescText = styled.span`
