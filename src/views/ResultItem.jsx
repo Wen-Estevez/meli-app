@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
-
 import freeShip from "../assets/ic_shipping.png";
+import { Link } from 'react-router-dom';
 
 const ItemCard = styled.section`
     display:grid;
@@ -17,13 +16,14 @@ const ItemCard = styled.section`
 `;
 const Title = styled.h4`
     margin-left: 25%;
-    color: #444444;
+    color: #757575;
     grid-column: 2/span 7;
     grid-row:3/span 2;
+    margin-top: -5%;
 `;
 const Price = styled.span`
     margin-left: 25%;
-    color: #444444;
+    color: #757575;
     margin-top: 5%;
     font-size:150%;
     grid-column: 2/span 7;
@@ -31,10 +31,11 @@ const Price = styled.span`
 `;
 const Image = styled.img`
     grid-column: 1/span 4;
-    width:180px;
-    height: 100px;
-    margin: 2%;
+    width:200px;
+    height: 200px;
+    margin: 5%;
     grid-row:1/span 4;
+    border-radius: 5px;
 `;
 const Freeship = styled.img`
     
@@ -43,6 +44,8 @@ const Condition = styled.span`
     margin-left: 67%;
     grid-column: 10/span 12;
     grid-row:1/span 4;
+    margin-top: 15%;
+    color: #6b6a6a;
 `;
 const MenuL = styled(Link)`                           //Estilo link
     text-decoration:none;
