@@ -8,9 +8,14 @@ import ResultItem from "./ResultItem";
 const Results = styled.article`
     background: #f0efef;
 `;
+const ContCategories = styled.div`
+    margin-left: 14.7rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+`;
 const Categories = styled.span`
-    font-size: 10px;
-    margin-left: 3rem;
+    font-size: 12px;
+    margin: 1rem;
     color: #a8a8a8;
 `;
 
@@ -28,8 +33,11 @@ export default function SearchResults() {
     
     return(
         <Results>
-            {results.categories?.map((category) => <Categories key={i++}>{category}</Categories>)}
-            {results.items?.map((item)=>ResultItem(item))}
+            <ContCategories>
+                {results.categories?.map((category) => <Categories key={i++}>{category}</Categories>)}
+            </ContCategories>
+            {results.items?.map((item) => ResultItem(item))}
+            
         </Results>
     )
 }
